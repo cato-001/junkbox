@@ -3,7 +3,6 @@ package out
 import (
 	"encoding/json"
 	"fmt"
-	"os"
 )
 
 func Jsonln(data any) {
@@ -25,8 +24,4 @@ func Ejsonln(err error) {
 		return
 	}
 	Eprintln(string(content))
-}
-
-func Eprintln(a ...any) {
-	fmt.Fprintln(os.Stderr, a...)
 }
